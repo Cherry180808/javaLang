@@ -11,7 +11,7 @@ public enum  ResultEnums {
     ERROR("1000","请求失败"),
     SYSTEM_ERROR("1001","系统异常"),
     BUSSINESS_ERROR("1002","业务逻辑错误"),
-    PARAM_ERROR("1003","业务参数错误");
+    PARAM_ERROR("1003","业务参数值不能为空");
 
     private String code;
     private String msg;

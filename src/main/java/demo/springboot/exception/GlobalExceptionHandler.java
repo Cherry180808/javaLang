@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler({MissingServletRequestParameterException.class,ParamIsNullException.class})
     public ResponseData paramIsNullHandler(Exception ex){
-        return ResponseDataUtil.buildError(ResultEnums.BUSSINESS_ERROR);
+        return ResponseDataUtil.buildError(ResultEnums.PARAM_ERROR);
     }
 
     @ExceptionHandler({Exception.class})

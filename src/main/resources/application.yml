@@ -1,6 +1,6 @@
 ### Default server port #########
 server:
-  port: 9000
+  port: 19000
 mybatis:
   mapper-locations: classpath:/config/mapper/*.xml
   config-location: classpath:/config/mybatis-config.xml
