@@ -1,10 +1,11 @@
 ### Default server port #########
 server:
   port: 19000
+  tomcat:
+    uri-encoding: UTF-8
 mybatis:
-  mapper-locations: classpath:/config/mapper/*.xml
-  config-location: classpath:/config/mybatis-config.xml
-  type-aliases-package: demo.springboot.model
+  mapper-locations: classpath:/config/mapper/*.xml  #mapper文件路径
+  type-aliases-package: demo.springboot.model  #实体类的包路径
 spring:
   datasource:
     username: root

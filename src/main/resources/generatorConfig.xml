@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 可选 -->
+    <classPathEntry location="C:\Users\wh1407018.WH\.m2\repository\mysql\mysql-connector-java\8.0.17\mysql-connector-java-8.0.17.jar" />
+    <context id="MySql" defaultModelType="flat">
+        <!--去掉注释-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库连接配置-->
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT"
+                userId="root"
+                password="123456" />
+        <!--指定自动生成的POJO位于哪个包-->
+        <javaModelGenerator targetPackage="demo.springboot.model" targetProject="src/main/java">
+
+        </javaModelGenerator>
+        <!--指定自动生成的mapper.xml位于哪个包-->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="src/main/resources/config/mapper">
+
+        </sqlMapGenerator>
+        <!--指定自动生成的DAO位于哪个包-->
+        <javaClientGenerator targetPackage="demo.springboot.mapper" targetProject="src/main/java" type="XMLMAPPER">
+
+        </javaClientGenerator>
+
+        <table tableName="test_user_info">
+            <property name="modelOnly" value="false"/>
+        </table>
+    </context>
+</generatorConfiguration>
