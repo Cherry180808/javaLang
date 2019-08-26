@@ -13,7 +13,7 @@ public class InitData {
         List<Student> stuList = new ArrayList<>(10);
         stuList.add(new Student("刘一", 85));
         stuList.add(new Student("陈二", 90));
-        stuList.add(new Student("张三", 98));
+        stuList.add(new Student("张三", 85));
         stuList.add(new Student("李四", 88));
         stuList.add(new Student("王五", 83));
         stuList.add(new Student("赵六", 95));
